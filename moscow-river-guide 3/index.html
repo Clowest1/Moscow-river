@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вниз по течению — Москва глазами реки</title>
+  <meta name="description" content="Историко-культурный маршрут по Москве вдоль Москвы-реки: 14 остановок от Москва-Сити до Коломенского.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker">Историко-культурный маршрут · Москва</p>
+      <h1>Вниз <em>по течению</em></h1>
+      <p class="sub">Москва глазами реки: 14 остановок от небоскрёбов Сити до царского Коломенского. Мы идём вместе с водой, с запада на восток, и смотрим, как на берегах сменяются века.</p>
+      <div class="hero-stats">
+        <div><b>14</b><span>остановок</span></div>
+        <div><b>1</b><span>река</span></div>
+        <div><b>XIV–XXI</b><span>века</span></div>
+      </div>
+      <a class="btn" href="#route">Начать маршрут ↓</a>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,64 C240,120 480,0 720,48 C960,96 1200,16 1440,56 L1440,120 L0,120 Z"/></svg>
+  </header>
+
+  <section class="about">
+    <div class="wrap">
+      <h2>Почему река</h2>
+      <p>Москва выросла на Боровицком холме у слияния Москвы-реки и Неглинной. Река была дорогой, границей и линией обороны: монастыри-крепости стоят на её излучинах, усадьбы и парки — на высоких берегах, а XX и XXI век оставили здесь свои главные символы. Поэтому каждая следующая остановка маршрута — это просто следующий поворот реки.</p>
+    </div>
+  </section>
+
+  <main id="route" class="route">
+    <div class="map-col" id="mapCol">
+      <div class="map-bar">
+        <span class="map-now" id="mapNow">Весь маршрут · 14 остановок</span>
+        <button type="button" class="map-toggle" id="mapToggle" aria-expanded="true" aria-controls="map">Свернуть карту ▲</button>
+      </div>
+      <div id="map" aria-label="Карта маршрута"></div>
+      <div class="map-legend"><span class="dot"></span> Остановка · <span class="line"></span> Направление маршрута</div>
+    </div>
+    <div class="stops" id="stops"></div>
+  </main>
+
+  <section class="sources">
+    <div class="wrap">
+      <h2>Источники и полезные ссылки</h2>
+      <ul>
+        <li><a href="https://www.kreml.ru/" target="_blank" rel="noopener">Музеи Московского Кремля — kreml.ru</a></li>
+        <li><a href="https://whc.unesco.org/en/statesparties/ru" target="_blank" rel="noopener">Объекты Всемирного наследия ЮНЕСКО в России</a></li>
+        <li><a href="https://mgomz.ru/" target="_blank" rel="noopener">Музей-заповедник «Коломенское» — mgomz.ru</a></li>
+        <li><a href="https://www.zaryadyepark.ru/" target="_blank" rel="noopener">Парк «Зарядье» — zaryadyepark.ru</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Москва_(река)" target="_blank" rel="noopener">Москва (река) — Википедия</a></li>
+      </ul>
+      <p class="note">Фотографии загружаются из статей Википедии (лицензии Creative Commons); ссылка на источник есть под каждым фото.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="team-title">Проект «Вниз по течению» выполнили</p>
+      <p class="team">Вышегородцев Андрей · Татуев Владислав · Абдулнасыров Раиль · Песковацкий Игорь</p>
+      <p>Группа БПИ269 · НИУ «Высшая школа экономики» · 2026</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
